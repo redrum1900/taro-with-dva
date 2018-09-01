@@ -5,16 +5,13 @@ import { connect } from '@tarojs/redux';
 import './index.less';
 
 @connect(({ count }) => ({
-  ...count,
+  count,
 }))
 
 export default class Index extends Component {
   config = {
     navigationBarTitleText: '首页',
   };
-  defaultProps={
-    count:{}
-  }
 
   componentWillUnmount() {}
 
@@ -30,7 +27,8 @@ export default class Index extends Component {
   };
 
   render() {
-    const { num } = this.props;
+    const { count } = this.props;
+    const { num } = count;
 
     return (
       <View className="index">

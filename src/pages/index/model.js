@@ -13,9 +13,7 @@ export default {
   },
   reducers: {
     updateState(state, { payload }) {
-      const sta = { ...state, ...payload };
-      console.log(sta);
-      return sta;
+      return { ...state, ...payload };
     },
   },
 };
